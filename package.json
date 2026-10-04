@@ -1,0 +1,17 @@
+{
+  "name": "qa-portfolio-docs",
+  "version": "1.0.0",
+  "description": "QA Automation Portfolio - Central documentation linking all QA projects",
+  "author": "Mario Rodríguez",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarioGRodriguez28/qa-portfolio-docs.git"
+  },
+  "keywords": [
+    "qa",
+    "automation",
+    "portfolio",
+    "testing"
+  ]
+}
