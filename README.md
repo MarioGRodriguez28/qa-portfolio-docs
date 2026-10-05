@@ -1,181 +1,36 @@
 # QA Automation Portfolio
 
-**Mario Rodríguez** — QA Automation Engineer  
-🔗 [LinkedIn](https://linkedin.com/in/mario-rodriguez) | 📧 mariog.rodriguezm@gmail.com | 🌐 [mariogrodriguez.com](https://mariogrodriguez.com)
+Mario Rodríguez, QA Automation Engineer (freelance).
 
----
+[mariogrodriguez.com](https://mariogrodriguez.com) · [LinkedIn](https://linkedin.com/in/mariogrm) · mariog.rodriguezm@gmail.com · [Book a call](https://calendly.com/mariog-rodriguezm)
 
-## 👋 About Me
+This repository is the index of my public QA work. Every project below is standalone: clone it, run `npm install && npm test`, and read the code.
 
-I'm a QA Automation Engineer with expertise in **test automation**, **API testing**, and **quality assurance**. Passionate about writing clean, maintainable test code and building tools that make testing easier and more efficient.
+## Projects
 
-### Core Competencies
+| Project | What it is | Stack |
+|---|---|---|
+| [qa-audit-agent](https://github.com/MarioGRodriguez28/qa-audit-agent) | CLI that audits an API from its OpenAPI spec and a web page in a real browser, scores each from 0 to 100 and writes a client-readable report. The AI summary is optional and the checks do not depend on it. | Node.js, Playwright, axe-core, Jest |
+| [api-testing-suite](https://github.com/MarioGRodriguez28/api-testing-suite) | REST API test suite: CRUD, edge cases, error handling, response times and concurrent requests. | Jest, Supertest |
+| [qa-test-helpers](https://github.com/MarioGRodriguez28/qa-test-helpers) | Small library of testing utilities: fluent request builder, fixture generators, validators and reporters. No runtime dependencies. | Node.js, Jest |
+| [performance-load-tests](https://github.com/MarioGRodriguez28/performance-load-tests) | k6 scripts for smoke, load and stress scenarios with thresholds on p95, p99 and error rate. | k6 |
 
-- **Test Automation** — Jest, Playwright, Supertest
-- **API Testing** — REST APIs, integration testing, contract testing
-- **Test Frameworks** — Custom builders, fixtures, reporters
-- **CI/CD** — GitHub Actions, automated pipelines
-- **Quality Assurance** — Test planning, test execution, defect reporting
-- **Performance Testing** — Load testing, performance analysis
+All of them run in GitHub Actions on every push.
 
----
+## What each one shows
 
-## 🚀 Portfolio Projects
+**qa-audit-agent** is the most complete piece. It turns QA checks into something a client can read: a score, a prioritised list of findings and a plain-language summary. It also treats the tool itself as a security surface: it refuses private addresses, validates every redirect hop, and sends the model only finding metadata. The redirect handling came from a bug I found by testing it, and there are regression tests for it.
 
-### 1. **API Testing Suite**
+**api-testing-suite** is the baseline: what a solid automated API check looks like, with a coverage threshold enforced in CI.
 
-> Comprehensive test suite for REST APIs with 36+ tests covering CRUD operations
+**qa-test-helpers** shows design rather than test volume: small, composable pieces that other test code can reuse. Writing its unit tests also exposed two real bugs in the library, which are fixed.
 
-**Repository:** [api-testing-suite](https://github.com/MarioGRodriguez28/api-testing-suite)
+**performance-load-tests** covers the non-functional side, with explicit pass or fail thresholds instead of just printing numbers.
 
-**Key Features:**
-- ✅ 36+ passing tests (Users, Posts, Comments endpoints)
-- ✅ Complete CRUD coverage (GET, POST, PUT, DELETE)
-- ✅ Error handling & validation tests
-- ✅ Data consistency checks
-- ✅ Custom API client wrapper
-- ✅ Test helpers & validators
-- ✅ Jest configuration with 70% coverage threshold
+## Working together
 
-**Tech Stack:** Jest, Supertest, Node.js
+I take freelance QA automation work: API and end-to-end test suites, CI pipelines, and quality audits of existing products. The easiest way to start is a short call: [calendly.com/mariog-rodriguezm](https://calendly.com/mariog-rodriguezm).
 
-**What It Shows:**
-- Ability to write comprehensive test suites
-- Understanding of API contract testing
-- Test organization and structure
-- Error handling and edge case testing
-- Professional documentation
+## License
 
----
-
-### 2. **QA Test Helpers Library**
-
-> Professional testing utilities library — fluent builders, fixtures, validators, reporters
-
-**Repository:** [qa-test-helpers](https://github.com/MarioGRodriguez28/qa-test-helpers)
-
-**Key Features:**
-- 🏗️ **Fluent API Builder** — Chain methods for readable request construction
-- 🎯 **Smart Fixtures** — Realistic test data generation
-- ✅ **Advanced Validators** — Email, URL, phone, JSON validation
-- 📊 **Beautiful Reporters** — Console, JSON, HTML outputs
-- 📦 **Zero Dependencies** — Pure JavaScript
-
-**Tech Stack:** Vanilla JavaScript (NPM package)
-
-**What It Shows:**
-- Software architecture & design patterns
-- Reusable code principles (DRY)
-- Building developer tools
-- Comprehensive documentation
-- Professional package structure
-
----
-
-### 3. **Performance Load Testing** *(Upcoming)*
-
-> Load testing suite with k6 and automated performance analysis
-
-**Expected Features:**
-- 📈 Load testing scenarios
-- 📊 Performance metrics & analysis
-- 📉 Trend reporting
-- 🔄 CI/CD integration
-- 🎯 SLA validation
-
----
-
-## 📈 Skills Demonstrated
-
-| Skill | Projects | Level |
-|-------|----------|-------|
-| **API Testing** | API Suite, Test Helpers | ⭐⭐⭐⭐⭐ |
-| **Test Automation** | API Suite | ⭐⭐⭐⭐⭐ |
-| **Architecture** | Test Helpers | ⭐⭐⭐⭐ |
-| **Documentation** | All | ⭐⭐⭐⭐⭐ |
-| **CI/CD** | API Suite | ⭐⭐⭐⭐ |
-| **JavaScript** | All | ⭐⭐⭐⭐⭐ |
-| **Performance Testing** | Upcoming | ⭐⭐⭐ |
-
----
-
-## 🔧 Tech Stack Summary
-
-```
-Languages:      JavaScript, Node.js
-Testing:        Jest, Supertest, Playwright, k6
-Architecture:   Fluent API, Builder Pattern, Fixture Factory
-Reporting:      Console, JSON, HTML, Grafana
-CI/CD:          GitHub Actions
-Tools:          Git, npm, GitHub Projects
-```
-
----
-
-## 📊 Projects at a Glance
-
-| Project | Type | Tests | Status | Repo |
-|---------|------|-------|--------|------|
-| API Testing Suite | Test Suite | 36+ | ✅ Live | [Link](https://github.com/MarioGRodriguez28/api-testing-suite) |
-| QA Test Helpers | Library | Coverage | ✅ Live | [Link](https://github.com/MarioGRodriguez28/qa-test-helpers) |
-| Performance Tests | Performance | TBD | 🚀 In Progress | - |
-
----
-
-## 📖 How to Use This Portfolio
-
-Each repository is **standalone and complete**:
-
-1. **api-testing-suite** — Clone it, run `npm install && npm test` to see 36 tests pass
-2. **qa-test-helpers** — Import it as a library or explore the architecture
-3. **performance-load-tests** — Coming soon with load testing examples
-
-All projects include:
-- ✅ Professional README
-- ✅ Clear code examples
-- ✅ Comprehensive documentation
-- ✅ Ready-to-run tests
-- ✅ Clean git history
-
----
-
-## 🎯 What's Next
-
-- [ ] Performance load testing suite (k6)
-- [ ] E2E testing with Playwright
-- [ ] Visual regression testing
-- [ ] Test reporting dashboard
-- [ ] API documentation & contract testing
-
----
-
-## 💡 Key Achievements
-
-✨ **36+ passing tests** in API suite
-✨ **643 lines** of production-ready test helper code
-✨ **Zero dependencies** in utilities library
-✨ **Professional CI/CD** pipelines
-✨ **Clean, documented code** across all projects
-
----
-
-## 📞 Get in Touch
-
-**Let's work together!**
-
-- 📧 Email: mariog.rodriguezm@gmail.com
-- 🔗 LinkedIn: [mario-rodriguez](https://linkedin.com/in/mario-rodriguez)
-- 🌐 Website: [mariogrodriguez.com](https://mariogrodriguez.com)
-- 📅 Calendar: [Calendly](https://calendly.com/mario-rodriguez)
-
----
-
-## 📄 License
-
-All projects are MIT licensed — feel free to use, modify, and learn from them.
-
----
-
-**Last Updated:** October 4, 2026
-
-Built with ❤️ by Mario Rodríguez — QA Automation Engineer
+MIT
