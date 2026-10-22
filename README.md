@@ -14,7 +14,7 @@ This repository is the index of my public QA work. Every project below is standa
 | [qa-audit-agent](https://github.com/MarioGRodriguez28/qa-audit-agent) | CLI that audits an API from its OpenAPI spec and a web page in a real browser, scores each from 0 to 100 and writes a client-readable report. The AI summary is optional and the checks do not depend on it. | Node.js, Playwright, axe-core, Jest |
 | [api-testing-suite](https://github.com/MarioGRodriguez28/api-testing-suite) | REST API test suite: CRUD, edge cases, error handling, response times and concurrent requests. | Jest, Supertest |
 | [qa-test-helpers](https://github.com/MarioGRodriguez28/qa-test-helpers) | Small library of testing utilities: fluent request builder, fixture generators, validators and reporters. No runtime dependencies. | Node.js, Jest |
-| [performance-load-tests](https://github.com/MarioGRodriguez28/performance-load-tests) | k6 scripts for smoke, load and stress scenarios with thresholds on p95, p99 and error rate. | k6 |
+| [performance-load-tests](https://github.com/MarioGRodriguez28/performance-load-tests) | k6 scripts for smoke, load, stress, spike and soak scenarios with thresholds on p95, p99 and error rate, runnable on demand from CI. | k6 |
 
 All of them run in GitHub Actions on every push.
 
