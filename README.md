@@ -11,6 +11,7 @@ This repository is the index of my public QA work. Every project below is standa
 | Project | What it is | Stack |
 |---|---|---|
 | [playwright-e2e-framework](https://github.com/MarioGRodriguez28/playwright-e2e-framework) | End-to-end and API test framework: page objects, custom fixtures, tagged suites and a pipeline that runs smoke tests on pull requests and the full suite on `main` and nightly, with reports and traces as artifacts. | Playwright, TypeScript, GitHub Actions |
+| [contentful-qa](https://github.com/MarioGRodriguez28/contentful-qa) | Learning project that tests a headless CMS at four levels against a Contentful space: REST (Axios and Postman), GraphQL, a small page with Playwright on desktop and phones, and a gentle k6 load check, all in CI. | TypeScript, Playwright, Postman, k6, Python |
 | [qa-audit-agent](https://github.com/MarioGRodriguez28/qa-audit-agent) | CLI that audits an API from its OpenAPI spec and a web page in a real browser, scores each from 0 to 100 and writes a client-readable report. The AI summary is optional and the checks do not depend on it. | Node.js, Playwright, axe-core, Jest |
 | [qa-eval-bench](https://github.com/MarioGRodriguez28/qa-eval-bench) | Scores how many bugs a test suite catches by planting small bugs in correct code, one at a time, so tests written by people or by AI models can be compared on the same footing. | Node.js, mutation testing |
 | [api-testing-suite](https://github.com/MarioGRodriguez28/api-testing-suite) | REST API test suite: CRUD, edge cases, error handling, response times and concurrent requests. | Jest, Supertest |
@@ -22,6 +23,8 @@ All of them run in GitHub Actions on every push.
 ## What each one shows
 
 **qa-audit-agent** is the most complete piece. It turns QA checks into something a client can read: a score, a prioritised list of findings and a plain-language summary. It also treats the tool itself as a security surface: it refuses private addresses, validates every redirect hop, and sends the model only finding metadata. The redirect handling came from a bug I found by testing it, and there are regression tests for it.
+
+**contentful-qa** is a learning project that checks one thing from the API down to the screen: that unpublished content is never delivered. It does that through REST, GraphQL and a real page, with 214 passing cases, and its README says what was not done, such as Appium.
 
 **qa-eval-bench** answers a question I care about: a test that passes proves little, so how many bugs does it actually catch? On the included tasks, tests that only cover the happy path catch between 38% and 70% of the planted bugs and thorough ones between 90% and 100%. The scoring does not use a model, so it is a fair way to compare tests written by people or by AI models.
 
